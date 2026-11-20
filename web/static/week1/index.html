@@ -4,45 +4,37 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ข่าวชมรม — บทเรียน HTML สัปดาห์ที่ 1</title>
+  <title>ร้านตัวอย่าง — บทเรียน HTML สัปดาห์ที่ 1</title>
 </head>
 
 <body>
   <header>
-    <h1>ชมรมเกมฟุตบอลมือถือ</h1>
+    <h1>ร้านตัวอย่าง</h1>
     <nav aria-label="เมนูหลัก">
-      <a href="#news-compete">ข่าวประกาศแข่งขัน</a>
-      <a href="#news-prize">ข่าวประกาศแจกเงินรางวัล</a>
-      <a href="#news-winner">ข่าวประกาศผลผู้ชนะ</a>
+      <a href="#catalog">สินค้า</a>
+      <a href="#cart">ตะกร้าตัวอย่าง</a>
     </nav>
   </header>
 
   <main>
     <section aria-labelledby="welcome-title">
-      <h2 id="welcome-title">ยินดีต้อนรับสู่ชมรมเกมฟุตบอลมือถือ</h2>
-      <p>ศูนย์รวมข่าวสาร การแข่งขัน และกิจกรรมสำหรับสมาชิกชมรมเกมฟุตบอลมือถือ</p>
+      <h2 id="welcome-title">เลือกของใช้สำหรับการเรียน</h2>
+      <p>หน้านี้เป็นตัวอย่าง HTML แบบคงที่ ยังไม่มี CSS, JavaScript หรือ API</p>
     </section>
 
-    <section aria-labelledby="news-section-title">
-      <h2 id="news-section-title">ข่าวสารและประกาศล่าสุด</h2>
-
-      <article id="news-compete" aria-labelledby="compete-title">
-        <h3 id="compete-title">ข่าวประกาศแข่งขัน</h3>
-        <p>เปิดรับสมัครสมาชิกเข้าร่วมการแข่งขันทัวร์นาเมนต์ประจำเดือนนี้ สมัครได้ตั้งแต่วันนี้ถึงวันศุกร์ เวลา 18.00 น.
-        </p>
+    <section id="catalog" aria-labelledby="catalog-title">
+      <h2 id="catalog-title">รายการสินค้า</h2>
+      <article aria-labelledby="notebook-title">
+        <h3 id="notebook-title">สมุดบันทึก</h3>
+        <p>ปกอ่อน จำนวน 120 หน้า</p>
+        <p>ราคา <data value="129">129 บาท</data></p>
+        <button type="button" disabled>เพิ่มลงตะกร้า — จะทำงานในบทเรียนภายหลัง</button>
       </article>
+    </section>
 
-      <article id="news-prize" aria-labelledby="prize-title">
-        <h3 id="prize-title">ข่าวประกาศแจกเงินรางวัล</h3>
-        <p>รายละเอียดเงินรางวัลสำหรับผู้ชนะการแข่งขัน อันดับ 1 รับ 1,500 บาท อันดับ 2 รับ 800 บาท และอันดับ 3 รับ 500
-          บาท</p>
-      </article>
-
-      <article id="news-winner" aria-labelledby="winner-title">
-        <h3 id="winner-title">ข่าวประกาศผลผู้ชนะ</h3>
-        <p>ขอแสดงความยินดีกับผู้ชนะการแข่งขันรอบที่ผ่านมา
-          สามารถตรวจสอบรายชื่อผู้ได้รับรางวัลได้ที่บอร์ดประชาสัมพันธ์ของชมรม</p>
-      </article>
+    <section id="cart" aria-labelledby="cart-title">
+      <h2 id="cart-title">ตะกร้าตัวอย่าง</h2>
+      <p>ยังไม่มีสินค้าในตะกร้า</p>
     </section>
   </main>
 
