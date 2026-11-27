@@ -4,12 +4,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ร้านตัวอย่าง — บทเรียน HTML สัปดาห์ที่ 1</title>
+    <title>ร้านขายอุปกรณ์เครื่องเขียน — บทเรียน HTML สัปดาห์ที่ 3</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
     <header>
-        <h1>ร้านตัวอย่าง</h1>
+        <h1>ร้านขายอุปกรณ์เครื่องเขียน</h1>
         <nav aria-label="เมนูหลัก">
             <a href="#catalog">สินค้า</a>
             <a href="#cart">ตะกร้าตัวอย่าง</a>
@@ -19,17 +20,22 @@
     <main>
         <section aria-labelledby="welcome-title">
             <h2 id="welcome-title">เลือกของใช้สำหรับการเรียน</h2>
-            <p>หน้านี้เป็นตัวอย่าง HTML แบบคงที่ ยังไม่มี CSS, JavaScript หรือ API</p>
+            <p>หน้านี้เป็นตัวอย่าง HTML และ CSS</p>
         </section>
 
-        <section id="catalog" aria-labelledby="catalog-title">
+        <section aria-labelledby="catalog-title">
             <h2 id="catalog-title">รายการสินค้า</h2>
-            <article aria-labelledby="notebook-title">
-                <h3 id="notebook-title">สมุดบันทึก</h3>
-                <p>ปกอ่อน จำนวน 120 หน้า</p>
-                <p>ราคา <data value="129">129 บาท</data></p>
-                <button type="button" disabled>เพิ่มลงตะกร้า — จะทำงานในบทเรียนภายหลัง</button>
-            </article>
+            <div id="catalog">
+                <article aria-labelledby="notebook-title">
+                    <h3 id="notebook-title">สมุดบันทึก</h3>
+                    <button type="button" disabled>เพิ่มลงตะกร้า</button>
+                </article>
+
+                <article aria-labelledby="pen-title">
+                    <h3 id="pen-title">ปากกา</h3>
+                    <button type="button" disabled>เพิ่มลงตะกร้า </button>
+                </article>
+            </div>
         </section>
 
         <section id="cart" aria-labelledby="cart-title">
@@ -39,16 +45,23 @@
 
         <section aria-labelledby="inquiry-title">
             <h2 id="inquiry-title">แบบฟอร์มสอบถามสินค้า</h2>
-            <form method="get">
-                <label for="product">สินค้าที่สนใจ</label>
-                <select id="product" name="productId">
-                    <option value="notebook">สมุดบันทึก</option>
-                </select>
+            <form method="get" class="interest-form">
+                <div class="field">
+                    <label for="product">สินค้าที่สนใจ</label>
+                    <select id="product" name="productId">
+                        <option value="notebook">สมุดบันทึก</option>
+                        <option value="pen">ปากกาลูกลื่น</option>
+                    </select>
+                </div>
 
-                <label for="quantity">จำนวนที่สนใจ</label>
-                <input type="number" id="quantity" name="quantity" min="1" required>
+                <div class="field">
+                    <label for="quantity">จำนวนที่สนใจ</label>
+                    <input type="number" id="quantity" name="quantity" min="1" required>
+                </div>
 
                 <button type="submit">ทดลองส่งข้อมูล</button>
+                <button type="reset">คืนค่าเริ่มต้น</button>
+                <a href="index.html">เริ่มตัวอย่างใหม่</a>
             </form>
         </section>
     </main>
@@ -56,6 +69,6 @@
     <footer>
         <p>ตัวอย่างสำหรับฝึกอ่านโครงสร้างเอกสารและ DOM</p>
     </footer>
-</body>เีะ
+</body>
 
 </html>
